@@ -1,0 +1,28 @@
+query selectBadTemperatureReadings {
+  description: "Select all temp readings out of bounds"
+  statement:
+    SELECT org.acme.shipping.iot.TemperatureReading
+      WHERE (exceedsBounds == true)
+}
+
+query selectBadForceReadings {
+  description: "Select all force readings out of bounds"
+  statement:
+    SELECT org.acme.shipping.iot.ForceReading
+      WHERE (exceedsBounds == true)
+}
+
+query selectExceedsMinTemperatureReadings {
+  description: "Select all temp readings out of bounds"
+  statement:
+    SELECT org.acme.shipping.iot.TemperatureReading
+      WHERE (exceedsMinTemperatureBounds == true)
+}
+
+query selectExceedsMaxTemperatureReadings {
+  description: "Select all temp readings out of bounds"
+  statement:
+    SELECT org.acme.shipping.iot.TemperatureReading
+      WHERE (exceedsMaxTemperatureBounds == true)
+}
+
